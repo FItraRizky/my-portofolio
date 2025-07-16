@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">PORTOFOLIO SAYA</a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <img src="siang.svg" class="theme-toggle-light" alt="Light mode">
+                <img src="nightmode-svgrepo-com.svg" class="theme-toggle-dark" alt="Dark mode">
+            </button>
+        </div>
+    </header>
+
+    <main class="grid-container">
+        <section id="home" class="hero">
+            <div class="hero-content" data-aos="fade-up">
+                <h2>Selamat Datang</h2>
+                <p>Di Portfolio Website Saya</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 data-aos="fade-up">Tentang Saya</h2>
+            <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+                <img src="profile.jpg" alt="Foto Profil" class="profile-img">
+                <div class="bio">
+                    <p>saya ryan cuman mau kumpul tugas dari eduwork</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2 data-aos="fade-up">karya</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="project1.jpg" alt="kosong">
+                    <h3>tugas eduwork</h3>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="project2.jpg" alt="kosong">
+                    <h3>tugas</h3>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="project3.jpg" alt="kosong">
+                    <h3>tugas</h3>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="project4.jpg" alt="kosong">
+                    <h3>tugas</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 data-aos="fade-up">Hubungi Saya</h2>
+            <form class="contact-form" data-aos="fade-up" data-aos-delay="100">
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan Anda" required rows="5"></textarea>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy;tugas</p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
