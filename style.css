@@ -291,23 +291,29 @@ body {
 
 .bio p {
     overflow: hidden;
+    text-align: left;
     white-space: nowrap;
     margin: 0;
     letter-spacing: 1px;
     font-size: 1rem;
     color: var(--text-color);
     border-right: 3px solid var(--primary);
-    animation: typing 8s ease-in-out infinite,
-             blink-caret 0.75s step-end infinite,
-             blink 0.5s step-end infinite alternate;
+    animation: typing 12s ease-in-out infinite, blink-caret 0.75s step-end infinite;
+    width: 0;
 }
 
 @keyframes typing {
-    0%, 100% {
+    0% {
         width: 0;
     }
-    20%, 80% {
+    30% {
         width: 100%;
+    }
+    80% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
     }
 }
 
@@ -316,25 +322,10 @@ body {
     50% { border-color: var(--primary) }
 }
 
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-@keyframes blink {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: var(--primary);
-    }
-}
-
 @media screen and (max-width: 768px) {
     .bio p {
         font-size: 0.9rem;
-        animation: typing 3s steps(30) forwards, blink 0.75s step-end infinite;
+        animation: typing 4s steps(30) infinite, blink-caret 0.75s step-end infinite;
     }
 }
 
