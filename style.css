@@ -155,7 +155,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('profile.jpg');
+    background-image: url('thumbnail-new-education-real-work.webp');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -164,6 +164,7 @@ body {
     padding-top: 60px;
     transform-style: preserve-3d;
     perspective: 1000px;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -509,17 +510,17 @@ section {
     
     .hamburger {
         display: block;
-        position: absolute;
+        position: fixed;
         right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 1.2rem;
+        z-index: 1002;
     }
 
     .theme-toggle {
-        position: absolute;
+        position: fixed;
         right: 4rem;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 1.2rem;
+        z-index: 1002;
     }
 
     .nav-list {
@@ -527,7 +528,8 @@ section {
         top: 0;
         right: -100%;
         height: 100vh;
-        width: 250px;
+        width: 80%;
+        max-width: 250px;
         background-color: var(--header-bg);
         backdrop-filter: blur(10px);
         flex-direction: column;
@@ -535,10 +537,13 @@ section {
         align-items: center;
         transition: 0.3s ease-in-out;
         padding: 2rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-list.active {
         right: 0;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     }
 
     .nav-list li {
@@ -636,7 +641,16 @@ section {
     }
 
     .nav-list {
-        width: 100%;
+        width: 85%;
+        padding: 2rem 1rem;
+    }
+
+    .hamburger {
+        right: 0.5rem;
+    }
+
+    .theme-toggle {
+        right: 3.5rem;
     }
 }
 
@@ -682,7 +696,7 @@ section {
 /* Fix for high pixel density devices */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .hero {
-        background-image: url('profile.jpg');
+        background-image: url('eduwork.jpg');
     }
 }
 
@@ -729,4 +743,40 @@ section {
     margin-bottom: 2rem;
     color: var(--dark);
     font-size: 2.5rem;
+}
+
+/* Additional responsive background handling */
+@media screen and (max-width: 1400px) {
+    .hero {
+        background-position: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero {
+        background-position: 45% center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        background-position: 40% center;
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        background-position: 35% center;
+    }
+}
+
+/* Ensure image quality on different pixel densities */
+@media 
+(-webkit-min-device-pixel-ratio: 2) and (max-width: 768px),
+(min-resolution: 192dpi) and (max-width: 768px) {
+    .hero {
+        background-size: contain;
+        background-position: center;
+    }
 }
